@@ -4,13 +4,13 @@ files:
   - source: /index.html
     destination: /var/www/html/:
   BeforeInstall:
-    - location: /var/www/html/AWSCodeDeploy/deploy/scripts/install_dependencies
+    - location: deploy/scripts/install_dependencies.sh
       timeout: 300
       runas: root
-    - location: /var/www/html/AWSCodeDeploy/deploy/scripts/start_server
+    - location: deploy/scripts/start_server.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: /var/www/html/AWSCodeDeploy/deploy/scripts/stop_server
+    - location: deploy/scripts/stop_server.sh
       timeout: 300
       runas: root
