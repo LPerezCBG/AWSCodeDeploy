@@ -69,30 +69,30 @@ hooks:
 #   in the script specified in "location" starting from the root of the
 #   revision's file bundle.
  ApplicationStop:
-   - location: deploy/scripts/ApplicationStop.sh
+   - location: deploy/scripts/test.sh
      timeout: 180 # 3mins
      runas: ubuntu
 # During the BeforeInstall deployment lifecycle event, run the commands
 #   in the script specified in "location".
- BeforeInstall:
-   - location: deploy/scripts/BeforeInstall.sh
-     timeout: 120 # 2 mins
-     runas: ubuntu
+# BeforeInstall:
+#   - location: deploy/scripts/BeforeInstall.sh
+#     timeout: 120 # 2 mins
+#     runas: ubuntu
 # During the AfterInstall deployment lifecycle event, run the commands
 #   in the script specified in "location".
- AfterInstall:
-   - location: deploy/scripts/AfterInstall.sh
-     timeout: 600 # 10 mins
-     runas: ubuntu
+# AfterInstall:
+#   - location: deploy/scripts/AfterInstall.sh
+#     timeout: 600 # 10 mins
+#     runas: ubuntu
 # During the ApplicationInstall deployment lifecycle event, run the commands
 #   in the script specified in "location".
- ApplicationStart:
-   - location: deploy/scripts/ApplicationStart.sh
-     timeout: 60 # 1 mins
-     runas: ubuntu
+# ApplicationStart:
+#   - location: deploy/scripts/ApplicationStart.sh
+#     timeout: 60 # 1 mins
+#     runas: ubuntu
 # During the ValidateService deployment lifecycle event, run the commands
 #   in the script specified in "location".
- ValidateService:
-   - location: deploy/scripts/ValidateService.sh
-     timeout: 180 # 3 mins
-     runas: ubuntu
+# ValidateService:
+#   - location: deploy/scripts/ValidateService.sh
+#     timeout: 180 # 3 mins
+#     runas: ubuntu
