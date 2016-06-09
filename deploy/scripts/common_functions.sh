@@ -31,17 +31,11 @@
 
     ## SET environment based on deployment group.
     case $DEPLOYMENT_GROUP_NAME in
-        shredz-v2-production)
+        CodeDeployTest)
             ENV="production"
             # ENV_FILE_NAME=".env.php"
             # ELB_LIST="getshredz-production"
-            ELB_LIST="shredz-v2-production"
-            NEWRELIC_APPNAME="shredz-v2;shredz-v2-$ENV"
-            ;;
-        shredz-v2-staging|*)
-            ENV="staging"
-            # ENV_FILE_NAME=".env.staging.php"
-            ELB_LIST="shredz-v2-staging"
+            ELB_LIST="code-deploy-test"
             NEWRELIC_APPNAME="shredz-v2;shredz-v2-$ENV"
             ;;
     esac
